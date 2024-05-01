@@ -1,0 +1,21 @@
+.difficulty {
+    background-color: transparent;
+    border: 0;
+    transform: scale(80%);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.difficulty:hover {
+    transform: scale(100%)
+}
+
+@media screen and (max-width: 750px){
+    
+    main {
+        min-height: calc(100% - 182px);
+        position: relative;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

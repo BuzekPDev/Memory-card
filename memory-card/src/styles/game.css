@@ -1,0 +1,52 @@
+main {
+    width: 100%;
+    min-height: calc(100% - 104px);
+    max-height: fit-content;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-field {
+    max-width: 85rem;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+}
+
+img {
+    display: block;
+    pointer-events: none;
+}
+.card {
+    padding: 0%;
+    border: 0px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    animation-name: startingState;
+    animation-duration: 0.5s;
+    background-image: url("../assets/card-back.webp");
+    background-size: cover;
+}
+.card:hover {
+    transform: scale(115%);
+    box-shadow: 0px 15px 10px -15px  rgb(0, 0, 0, 0.5);
+}
+
+.flip {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+@keyframes startingState {
+    
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
